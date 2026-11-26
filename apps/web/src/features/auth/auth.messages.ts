@@ -2,7 +2,7 @@ import { defineMessages } from "@/i18n/messages";
 
 export const authMessages = defineMessages("auth", {
   loginTitle: "Log in",
-  loginSubtitle: "Welcome back to Linger.",
+  loginSubtitle: "Welcome back to Zerospace.",
   sessionExpired: "Your session has expired. Sign in again to continue.",
   localAccountSignIn: "Sign in with this computer's account",
   or: "or",
@@ -16,7 +16,7 @@ export const authMessages = defineMessages("auth", {
   artTitleFirst: "Your personal AI.",
   artTitleSecond: "A step ahead.",
   artLede:
-    "Linger runs on your own computer, keeps track of your work, and reaches out before anything slips.",
+    "Zerospace runs on your own computer, keeps track of your work, and reaches out before anything slips.",
   nudgeMorningTime: "9:00 AM",
   nudgeMorning: "Demo is tomorrow. I drafted the brief.",
   nudgeMiddayTime: "1:30 PM",
@@ -26,7 +26,7 @@ export const authMessages = defineMessages("auth", {
   timedOut:
     "This step timed out. Try again. Your previous request may have completed.",
   sessionNotEstablished:
-    "Linger could not establish a browser session. Use the secure workspace address or contact your workspace administrator.",
+    "Zerospace could not establish a browser session. Use the secure workspace address or contact your workspace administrator.",
   invalidEmail: "Enter a valid email address.",
   desktopAccountUnavailable:
     "This computer's account could not be used. Log in with your email and password.",

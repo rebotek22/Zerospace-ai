@@ -56,7 +56,9 @@
   --color-border: hsl(var(--town-border));
   --color-border-hover: hsl(var(--town-border-hover));
   --color-input: hsl(var(--town-input));
-  --color-ring: hsl(var(--town-primary) / 0.4);
+  --color-ring: hsl(var(--town-brand) / 0.45);
+  --color-brand: hsl(var(--town-brand));
+  --color-brand-foreground: hsl(var(--town-brand-foreground));
   --color-sidebar: hsl(var(--town-sidebar));
   --color-sidebar-muted: hsl(var(--town-sidebar-muted));
   --color-sun-500: #d95b31;
@@ -476,11 +478,11 @@ a[href][aria-disabled="true"],
 
 .auth-brand-wordmark {
   display: block;
-  width: 8rem;
+  width: 10rem;
   height: auto;
 }
 
-.linger-brand-mark {
+.zerospace-brand-mark {
   display: block;
   width: 3rem;
   height: 3rem;
@@ -585,6 +587,16 @@ a[href][aria-disabled="true"],
   height: 2.75rem;
   margin-top: 0.375rem;
   border-radius: 10px;
+  /* The one brand-colored action on the page: signing in. */
+  background-color: hsl(var(--town-brand));
+  box-shadow:
+    0 1px 2px hsl(var(--town-brand) / 0.25),
+    0 6px 18px -6px hsl(var(--town-brand) / 0.55);
+  color: hsl(var(--town-brand-foreground));
+}
+
+.auth-form .auth-submit:hover:not(:disabled) {
+  background-color: hsl(var(--town-send-hover));
 }
 
 .auth-local-account {
@@ -650,6 +662,23 @@ a[href][aria-disabled="true"],
   content: "";
 }
 
+/* A faint brand glow behind the picture, under the grid. */
+.auth-illustration > :first-child::before {
+  position: absolute;
+  z-index: -1;
+  top: 18%;
+  left: 10%;
+  width: 60%;
+  height: 60%;
+  background: radial-gradient(
+    closest-side,
+    hsl(var(--town-brand) / 0.1),
+    hsl(var(--town-brand) / 0)
+  );
+  content: "";
+  pointer-events: none;
+}
+
 .auth-illustration::after {
   position: absolute;
   inset: 0 -3rem 0 48%;
@@ -684,6 +713,19 @@ a[href][aria-disabled="true"],
 .auth-art-title > span {
   display: block;
   animation: auth-art-rise 0.9s var(--ease-town-out) 0.15s both;
+}
+
+.auth-art-title > span:first-child {
+  background: linear-gradient(
+    100deg,
+    hsl(var(--town-foreground)) 0%,
+    hsl(var(--town-foreground)) 45%,
+    hsl(var(--town-brand)) 85%,
+    #36c9f2 115%
+  );
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
 }
 
 .auth-art-title > span + span {
@@ -792,8 +834,8 @@ a[href][aria-disabled="true"],
 }
 
 .auth-art-moment[data-state="now"]::before {
-  background: var(--app-unread);
-  box-shadow: none;
+  background: hsl(var(--town-brand));
+  box-shadow: 0 0 0 0.3em hsl(var(--town-brand) / 0.18);
   transform: scale(1.25);
 }
 
