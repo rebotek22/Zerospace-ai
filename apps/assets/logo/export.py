@@ -16,9 +16,9 @@ import cairosvg
 
 ROOT = Path(__file__).resolve().parent
 REPO = ROOT.parents[2]
-INK = '#14122B'
-IVORY = '#F7F7FB'
-ACCENT = '#6E56FF'
+INK = '#111111'
+IVORY = '#F6F6F4'
+ACCENT = '#111111'
 NS = 'http://www.w3.org/2000/svg'
 ET.register_namespace('', NS)
 

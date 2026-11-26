@@ -28,7 +28,7 @@ result and date once done. These are screening checks, not legal clearance.
 | ink           | `hsl(246 41% 12%)` `#15122B`      | text and primary buttons; 18:1 on white       |
 | muted text    | `hsl(245 8% 44%)`                 | 5.5:1 on white                                |
 | canvas        | `hsl(240 20% 99%)`                | cool off-white                                |
-| logo gradient | `#4B2FE0` → `#6E56FF` → `#36C9F2` | app tile only                                 |
+| logo tile     | `#111111`                         | flat black, white mark                        |
 
 Linger's ivory `#F6F5F1` and amber `#FDA946` are gone from the identity.
 All tokens live in `apps/web/src/app/visual-theme.css` (`--town-brand` and

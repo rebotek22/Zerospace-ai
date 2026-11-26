@@ -1,8 +1,8 @@
 # Zerospace product logo
 
 The mark is a zero drawn as an orbit, open at the upper right where a small
-satellite sits, around a rounded Z. It sits on a rounded tile with a violet to
-cyan gradient (`#4B2FE0` → `#6E56FF` → `#36C9F2`). The idea: a personal agent
+satellite sits, around a rounded Z, in white on a flat black (`#111111`)
+rounded tile. The idea: a personal agent
 that runs in your own space, with nothing leaving it.
 
 `source/zerospace.svg` is the 1024 × 1024 master. Its elements carry ids
