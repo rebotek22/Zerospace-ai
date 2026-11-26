@@ -21,18 +21,21 @@ result and date once done. These are screening checks, not legal clearance.
 
 ## Palette
 
-| role          | value                             | notes                                         |
-| ------------- | --------------------------------- | --------------------------------------------- |
-| brand violet  | `hsl(250 85% 58%)` `#5739EF`      | accent, focus, send, main CTA; 6.5:1 on white |
-| brand deep    | `hsl(250 80% 46%)`                | accent text, hover                            |
-| ink           | `hsl(246 41% 12%)` `#15122B`      | text and primary buttons; 18:1 on white       |
-| muted text    | `hsl(245 8% 44%)`                 | 5.5:1 on white                                |
-| canvas        | `hsl(240 20% 99%)`                | cool off-white                                |
-| logo tile     | `#111111`                         | flat black, white mark                        |
+Graphite and paper, chosen with the unslop skill: untinted neutrals and ink,
+matching the flat black logo tile. The chrome has no hue of its own.
 
-Linger's ivory `#F6F5F1` and amber `#FDA946` are gone from the identity.
-All tokens live in `apps/web/src/app/visual-theme.css` (`--town-brand` and
-the `--app-accent*`, focus, ring, send and progress roles).
+| role       | value                        | notes                                   |
+| ---------- | ---------------------------- | --------------------------------------- |
+| ink        | `hsl(0 0% 7%)` `#111111`     | text, primary buttons, focus, selection |
+| muted text | `hsl(0 0% 42%)`              | 5.6:1 on white                          |
+| canvas     | `hsl(60 9% 98%)`             | warm paper white                        |
+| hairline   | ink at 8%                    | borders                                 |
+| live       | `hsl(145 54% 40%)` `#2F9E5B` | only for the live or now dot            |
+| logo tile  | `#111111`                    | flat black, white mark                  |
+
+The signature is the logo's satellite dot: a small solid green dot that marks
+what Zerospace is working on right now, and nothing else. The login page's one
+rich moment is the agent's day as a paper card.
 
 ## Logo
 
@@ -47,9 +50,10 @@ the `--app-accent*`, focus, ring, send and progress roles).
 
 ## Voice
 
-Calm, capable, private.
+Quiet, exact, private.
 
-- Calm, not sleepy. Capable, not boastful. Private, not secretive.
+- Quiet, not cold. Exact, not terse. Private, not secretive.
+- No exclamation marks, no trailing periods on short strings, no hype.
 
 ## What was renamed
 

@@ -1,50 +1,52 @@
 /* Zerospace design system: semantic tokens are bare HSL triplets consumed as
    hsl(var(--town-x) / alpha); every --app-* role below derives from them.
-   Neutrals lean cool toward the brand violet so the interface and the
-   orbit-and-Z mark read as one identity. */
+   Graphite and paper: untinted neutrals and ink, like the black logo tile.
+   The only chrome color is --town-live, the logo's satellite dot, which marks
+   something Zerospace is working on right now. */
 :root {
   color-scheme: light;
-  --town-background: 240 20% 99%;
-  --town-foreground: 246 41% 12%;
+  --town-background: 60 9% 98%;
+  --town-foreground: 0 0% 7%;
   --town-card: 0 0% 100%;
   --town-popover: 0 0% 100%;
-  --town-primary: 246 41% 12%;
+  --town-primary: 0 0% 7%;
   --town-primary-foreground: 0 0% 100%;
-  --town-secondary: 240 14% 95.5%;
-  --town-secondary-foreground: 245 12% 26%;
-  --town-muted: 240 18% 95.5%;
-  --town-muted-foreground: 245 8% 44%;
-  --town-accent: 245 30% 96%;
-  --town-accent-foreground: 246 41% 12%;
+  --town-secondary: 60 5% 95%;
+  --town-secondary-foreground: 0 0% 25%;
+  --town-muted: 60 5% 95%;
+  --town-muted-foreground: 0 0% 42%;
+  --town-accent: 60 5% 95%;
+  --town-accent-foreground: 0 0% 7%;
   --town-destructive: 14 89% 41%;
   --town-destructive-foreground: 0 0% 100%;
-  --town-info: 250 74% 53%;
+  --town-info: 212 70% 42%;
   --town-success: 98 48% 35%;
   --town-warning: 37 100% 39%;
-  --town-border: 240 14% 91.5%;
-  --town-border-hover: 240 12% 84%;
-  --town-border-heavy: 246 41% 12%;
-  --town-input: 240 14% 90%;
-  --town-input-hover: 240 12% 82%;
-  --town-sidebar: 240 27% 97.5%;
-  --town-sidebar-foreground: 246 41% 12%;
-  --town-sidebar-muted: 244 26% 93%;
-  --town-sidebar-border: 240 14% 90%;
-  --town-highlight: 250 80% 46%;
-  --town-button-accent: 250 60% 42%;
+  --town-border: 60 4% 91%;
+  --town-border-hover: 60 3% 84%;
+  --town-border-heavy: 0 0% 7%;
+  --town-input: 60 4% 89%;
+  --town-input-hover: 60 3% 80%;
+  --town-sidebar: 60 6% 96.5%;
+  --town-sidebar-foreground: 0 0% 7%;
+  --town-sidebar-muted: 60 4% 92%;
+  --town-sidebar-border: 60 4% 90%;
+  --town-highlight: 212 75% 36%;
+  --town-button-accent: 0 0% 7%;
   --town-comment-amber: 45 93% 47%;
-  --town-send: 250 85% 58%;
-  --town-send-hover: 250 80% 52%;
-  --town-shadow-outline: 0 0 0 1px #15122b0f;
-  --town-shadow-sm: 0 0 0 1px #15122b0f, 0 1px 3px #0000000a, 0 0 1px #0000000a;
-  --town-shadow-md: 0 0 0 1px #15122b0f, 0 2px 8px #0000000f, 0 0 2px #0000000a;
+  --town-send: 0 0% 7%;
+  --town-send-hover: 0 0% 20%;
+  --town-shadow-outline: 0 0 0 1px #1111110f;
+  --town-shadow-sm: 0 0 0 1px #1111110f, 0 1px 3px #0000000a, 0 0 1px #0000000a;
+  --town-shadow-md: 0 0 0 1px #1111110f, 0 2px 8px #0000000f, 0 0 2px #0000000a;
   --town-shadow-lg:
-    0 0 0 1px #15122b0f, 0 4px 16px #00000012, 0 2px 6px -2px #0000000a;
+    0 0 0 1px #1111110f, 0 4px 16px #00000012, 0 2px 6px -2px #0000000a;
   --town-shadow-xl:
-    0 0 0 1px #15122b0f, 0 8px 32px #00000014, 0 2px 8px -4px #0000000a;
-  /* The Zerospace brand violet (#5739ef), AA on white for text and fills. */
-  --town-brand: 250 85% 58%;
+    0 0 0 1px #1111110f, 0 8px 32px #00000014, 0 2px 8px -4px #0000000a;
+  /* Brand roles are ink, like the logo tile; --town-live is the satellite. */
+  --town-brand: 0 0% 7%;
   --town-brand-foreground: 0 0% 100%;
+  --town-live: 145 54% 40%;
   --town-shadow-button:
     0 1px 3px rgba(0, 0, 0, 0.1), 0 1px 2px -1px rgba(0, 0, 0, 0.1);
 }
@@ -65,18 +67,19 @@
   --app-border-interactive: hsl(var(--town-foreground) / 0.25);
   /* Same as the Message list row hover (muted at 70%). */
   --app-hover: hsl(var(--town-muted) / 0.7);
-  --app-selected: hsl(var(--town-brand) / 0.09);
+  --app-selected: hsl(var(--town-muted));
   --app-selected-strong: hsl(var(--town-primary));
   --app-action: hsl(var(--town-primary));
   --app-action-hover: hsl(var(--town-primary) / 0.9);
   --app-action-active: hsl(var(--town-border-heavy));
   --app-action-foreground: hsl(var(--town-primary-foreground));
-  /* The accent roles carry the brand violet; primary actions stay ink. */
+  /* Accent roles are ink: the chrome has no hue of its own. */
   --app-accent: hsl(var(--town-brand));
   --app-accent-hover: hsl(var(--town-send-hover));
-  --app-accent-surface: hsl(var(--town-brand) / 0.08);
-  --app-accent-border: hsl(var(--town-brand) / 0.3);
-  --app-accent-text: hsl(var(--town-highlight));
+  --app-accent-surface: hsl(var(--town-muted));
+  --app-accent-border: hsl(var(--town-border-hover));
+  --app-accent-text: hsl(var(--town-foreground));
+  --app-live: hsl(var(--town-live));
   --app-unread: hsl(var(--town-destructive));
   --app-unread-foreground: hsl(var(--town-destructive-foreground));
   --app-info: hsl(var(--town-info));
@@ -84,7 +87,7 @@
   --app-link: hsl(var(--town-info));
   --app-comment-highlight: hsl(var(--town-comment-amber));
   --app-focus: hsl(var(--town-brand));
-  --app-ring: hsl(var(--town-brand) / 0.45);
+  --app-ring: hsl(var(--town-brand) / 0.35);
   --app-danger: hsl(var(--town-destructive));
   /* The Voice Mode island: a white call bar with soft round controls. */
   --app-voice-island: hsl(var(--town-card));
